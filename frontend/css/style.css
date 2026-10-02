@@ -1,0 +1,56 @@
+body {
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+.summarygrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+.summarycard {
+    height: 100%;
+}
+.table td,
+.table th {
+    vertical-align: middle;
+}
+body.darkmode {
+    background: #121212;
+    color: #f1f1f1;
+}
+body.darkmode .card {
+    background: #1e1e1e;
+    color: #f1f1f1;
+    border-color: #444;
+}
+body.darkmode .table {
+    --bs-table-bg: #1e1e1e;
+    --bs-table-color: #f1f1f1;
+    --bs-table-striped-bg: #292929;
+    --bs-table-striped-color: #f1f1f1;
+}
+body.darkmode .form-control,
+body.darkmode .form-select {
+    background: #252525;
+    color: #f1f1f1;
+    border-color: #555;
+}
+body.darkmode .form-control::placeholder {
+    color: #aaa;
+}
+@media (max-width: 768px) {
+    .summarygrid {
+        grid-template-columns: 1fr;
+    }
+    h1,
+    h4 {
+        text-align: center;
+    }
+    .table {
+        font-size: 0.9rem;
+    }
+    .edit-btn,
+    .delete-btn {
+        margin-bottom: 0.25rem;
+    }
+}
